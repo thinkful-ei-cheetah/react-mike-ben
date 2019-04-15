@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>React Hello World</title>
+</head>
+
+<body>
+
+    <div id="application-root"></div>
+
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js"
+        crossorigin>
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+        crossorigin>
+    </script>
+    <script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js"
+        crossorigin>
+    </script>
+
+    <script type="text/babel">
+        function App(props) {
+            console.log(props)
+            return (
+                <header>
+                   {props.children}
+                </header>
+            );
+        }
+
+        ReactDOM.render(
+            <App className='my-class'>
+                <div>
+                    <h1>
+                        <span>
+                            Current Page Title!
+                        </span>
+                    </h1>
+                </div>
+            </App>,
+            document.querySelector('#application-root')
+        );
+    </script>
+</body>
+
+</html>
